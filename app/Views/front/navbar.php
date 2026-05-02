@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="#">NFS</a>
+        <a class="navbar-brand" href="#">
+            <img src="<?= base_url('assets/img/logopngb.png') ?>" alt="Logo New Fitness Systems" height="100">
+        </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
             <span class="navbar-toggler-icon"></span>
