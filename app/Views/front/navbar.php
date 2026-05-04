@@ -2,10 +2,26 @@
 <header class="site-header">
     <div class="container nav-container">
 
-        <a class="brand-logo" href="<?= base_url('/') ?>" 
-            style="<?= uri_string() === 'usuario_logueado' ? 'visibility:hidden;' : '' ?>">
-            <img src="<?= base_url('assets/img/logob.png') ?>" alt="New Fitness Systems">
-        </a>
+        <?php
+        $uri = uri_string();
+
+        $ocultarLogo =
+            $uri === 'usuario_logueado' ||
+            $uri === 'usuarios' ||
+            str_starts_with($uri, 'editar_usuario') ||
+            $uri === 'clientes' ||
+            $uri === 'profesores' ||
+            $uri === 'sistemas' ||
+            $uri === 'pagos' ||
+            $uri === 'suscripciones' ||
+            $uri === 'admin_horarios';
+        ?>
+
+        <?php if (!$ocultarLogo): ?>
+            <a class="brand-logo" href="<?= base_url('/') ?>">
+                <img src="<?= base_url('assets/img/logob.png') ?>" alt="New Fitness Systems">
+            </a>
+        <?php endif; ?>
 
         <button class="menu-toggle" id="menuToggle" type="button">☰</button>
 

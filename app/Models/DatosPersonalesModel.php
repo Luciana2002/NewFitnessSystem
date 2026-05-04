@@ -14,6 +14,7 @@ class DatosPersonalesModel extends Model
         'apellido',
         'email',
         'telefono',
-        'dni'
+        'dni',
+        'baja'
     ];
 }
