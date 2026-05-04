@@ -43,4 +43,12 @@ class Home extends BaseController
              . view('front/contacto')
              . view('front/footer');
     }
+
+    public function login(): string
+    {
+        return view('front/header')
+             . view('front/navbar')
+             . view('back/usuario/login')
+             . view('front/footer');
+    }
 }

@@ -32,10 +32,10 @@
             <a href="<?= base_url('contacto') ?>">Contacto</a>
             <a href="<?= base_url('nosotros') ?>">Nosotros</a>
 
-            <a href="#" class="btn-nav mobile-btn">Iniciar sesión</a>
+            <a href="<?= base_url('login') ?>" class="btn-nav mobile-btn">Iniciar sesión</a>
         </nav>
 
-        <a href="#" class="btn-nav desktop-btn">Iniciar sesión</a>
+        <a href="<?= base_url('login') ?>" class="btn-nav desktop-btn">Iniciar sesión</a>
 
     </div>
 </header>

@@ -17,8 +17,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- CSS propio -->
-    <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
+    <!-- CSS propio (SIN CACHÉ) -->
+    <link rel="stylesheet" href="<?= base_url('assets/css/style.css?v=' . time()) ?>">
 </head>
 
 <body>

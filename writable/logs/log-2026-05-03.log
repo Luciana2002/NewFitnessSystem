@@ -10,3 +10,57 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
  7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(65): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-03 22:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-03 22:53:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-03 22:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-03 22:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-03 22:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-03 23:35:32 --> ParseError: syntax error, unexpected token ","
+[Method: GET, Route: public/testdb]
+in APPPATH\Config\Database.php on line 44.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\NewFitnessSystems\\app\\Config\\Database.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Database')
+ 3 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(255): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Database')
+ 4 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(75): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 5 SYSTEMPATH\Debug\Toolbar.php(67): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 6 SYSTEMPATH\Config\Services.php(805): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+ 7 SYSTEMPATH\Config\BaseService.php(325): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+ 8 SYSTEMPATH\Config\BaseService.php(264): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+ 9 SYSTEMPATH\Config\Services.php(800): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+10 SYSTEMPATH\Config\BaseService.php(334): CodeIgniter\Config\Services::toolbar()
+11 SYSTEMPATH\Config\BaseService.php(203): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+12 SYSTEMPATH\Common.php(1078): CodeIgniter\Config\BaseService::get('toolbar')
+13 APPPATH\Config\Events.php(47): service('toolbar')
+14 SYSTEMPATH\Events\Events.php(152): CodeIgniter\Events\Events::Config\{closure}()
+15 SYSTEMPATH\CodeIgniter.php(325): CodeIgniter\Events\Events::trigger('pre_system')
+16 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(65): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-05-03 23:41:00 --> Error connecting to the database: CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error al buscar el servidor/instancia especificado [xFFFFFFFF].  SQLSTATE: 08001, code: -1
+[Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión SQLSTATE: HYT00, code: 0
+[Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. SQLSTATE: 08001, code: -1 in C:\xampp\htdocs\NewFitnessSystems\system\Database\SQLSRV\Connection.php:145
+Stack trace:
+#0 C:\xampp\htdocs\NewFitnessSystems\system\Database\BaseConnection.php(555): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\xampp\htdocs\NewFitnessSystems\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\NewFitnessSystems\app\Controllers\TestDB.php(12): CodeIgniter\Database\BaseConnection->query('SELECT 1 AS pru...')
+#3 C:\xampp\htdocs\NewFitnessSystems\system\CodeIgniter.php(951): App\Controllers\TestDB->index()
+#4 C:\xampp\htdocs\NewFitnessSystems\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDB))
+#5 C:\xampp\htdocs\NewFitnessSystems\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\NewFitnessSystems\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\NewFitnessSystems\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#8 C:\xampp\htdocs\NewFitnessSystems\index.php(65): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#9 {main}
+ERROR - 2026-05-03 23:42:57 --> Error connecting to the database: CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error al buscar el servidor/instancia especificado [xFFFFFFFF].  SQLSTATE: 08001, code: -1
+[Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión SQLSTATE: HYT00, code: 0
+[Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. SQLSTATE: 08001, code: -1 in C:\xampp\htdocs\NewFitnessSystems\system\Database\SQLSRV\Connection.php:145
+Stack trace:
+#0 C:\xampp\htdocs\NewFitnessSystems\system\Database\BaseConnection.php(555): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\xampp\htdocs\NewFitnessSystems\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\NewFitnessSystems\app\Controllers\TestDB.php(12): CodeIgniter\Database\BaseConnection->query('SELECT 1 AS pru...')
+#3 C:\xampp\htdocs\NewFitnessSystems\system\CodeIgniter.php(951): App\Controllers\TestDB->index()
+#4 C:\xampp\htdocs\NewFitnessSystems\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDB))
+#5 C:\xampp\htdocs\NewFitnessSystems\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\NewFitnessSystems\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\NewFitnessSystems\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#8 C:\xampp\htdocs\NewFitnessSystems\index.php(65): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#9 {main}

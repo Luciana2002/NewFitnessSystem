@@ -688,3 +688,62 @@ a {
     width: 100%;
     object-fit: cover;
 }
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-page {
+    background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url('../img/banner.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.login-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 20px 70px;
+}
+
+.login-card {
+    background-color: #1b1b1b;
+    color: white;
+    width: 100%;
+    max-width: 430px;
+    padding: 45px 35px;
+    border-left: 5px solid #0b8f70;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+.login-card h1 {
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.login-card p {
+    color: #cfcfcf;
+    margin-bottom: 30px;
+}
+
+.login-card label {
+    font-weight: 700;
+}
+
+.login-links {
+    margin-top: 22px;
+    text-align: center;
+}
+
+.login-link {
+    color: #0b8f70;
+    font-size: 14px;
+}
+
+.login-link:hover {
+    color: #0aa87f;
+}
